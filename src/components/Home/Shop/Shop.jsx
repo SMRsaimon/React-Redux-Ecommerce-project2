@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux';
 const Shop = () => {
 
 
-    const product =useSelector(state=>{
 
-        console.log(state.cart)
+    const products =useSelector(state=>{
+
+       return state.cart.fakeData
     })
     return (
         <div> 

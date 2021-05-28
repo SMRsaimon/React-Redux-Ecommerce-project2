@@ -4,6 +4,7 @@ import TopMenu from "../../Shared/TopMenu/TopMenu";
 import HomeBannerSlider from "../HomeBannerSlider/HomeBannerSlider";
 import HomeFeature from "../HomeFeature/HomeFeature";
 import HomeMenu from "../HomeMenu/HomeMenu";
+import Shop from "../Shop/Shop";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <h2>This is Home</h2>
+    <Shop/>
     </div>
   );
 };
