@@ -37,7 +37,7 @@ const OfferDetails = () => {
               className="offer-details-style"
             >
               <h2 className="offer-parsent d-flex align-items-center justify-content-center ms-3">{offer.offerParsent}</h2>
-              <Link to='' className="btn btn-dark float-end me-3">Buy Now</Link>
+              <Link to='' className="btn btn-dark float-end me-3">Shop Now</Link>
             </div>
           </div>
         ))}
