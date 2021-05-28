@@ -28,7 +28,7 @@ const offerData = [
 
 const OfferDetails = () => {
   return (
-    <div className='mt-3'>
+    <div className='mt-3 mb-5'>
       <div className="row">
         {offerData.map((offer) => (
           <div className="col-md-4 mt-2">
