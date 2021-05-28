@@ -10,7 +10,7 @@ const Shop = () => {
        return state.cart.fakeData
     })
 
-    
+
     return (
         <div> 
           
