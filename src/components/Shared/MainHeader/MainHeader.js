@@ -37,7 +37,7 @@ const MainHeader = () => {
           <div className="logo col-2">
             <h2>E-commerce</h2>
           </div>
-          <div className="row search-cate-btn-part d-flex align-items-center col-5">
+          <div className="row search-cate-btn-part d-flex align-items-center col-5 d-none">
             <div className="col-7">
               <input type="text" placeholder="search" />
             </div>

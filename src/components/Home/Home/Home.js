@@ -4,6 +4,7 @@ import TopMenu from "../../Shared/TopMenu/TopMenu";
 import HomeBannerSlider from "../HomeBannerSlider/HomeBannerSlider";
 import HomeFeature from "../HomeFeature/HomeFeature";
 import HomeMenu from "../HomeMenu/HomeMenu";
+import OfferDetails from "../OfferDetails/OfferDetails";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
           </div>
           <div className="col-md-9 right-part">
             <HomeBannerSlider></HomeBannerSlider>
+            <OfferDetails></OfferDetails>
           </div>
         </div>
       </div>
