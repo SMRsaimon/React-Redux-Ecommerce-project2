@@ -43,7 +43,7 @@ console.log(products);
           <div className="logo col-2">
             <h2>E-commerce</h2>
           </div>
-          <div className="row search-cate-btn-part d-flex align-items-center col-5 d-none">
+          <div className="row search-cate-btn-part d-flex align-items-center col-5">
             <div className="col-7">
               <input type="text" placeholder="search" />
             </div>
@@ -78,10 +78,10 @@ console.log(products);
             </div>
           </div>
           <div className="about-part d-flex align-items-center justify-content-end col-4">
-            <div className="icon-part">
+            <div className="icon-part d-none d-md-block">
               <FontAwesomeIcon icon={faPhone} size="2x" />
             </div>
-            <div className="phone-text-part">
+            <div className="phone-text-part d-none d-md-block">
               <h6>
                 <small>call us now</small>
               </h6>

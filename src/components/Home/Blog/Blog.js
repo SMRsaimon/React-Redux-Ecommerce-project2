@@ -44,7 +44,7 @@ const Blog = () => {
             <div className="border text-center pb-5 px-3">
             <img className="" src={blog.img} alt="" />
               <h4 className="text-start">{blog.name}</h4>
-              <p className="text-start">{blog.details} <br /><Link to=''>continue...</Link> </p>
+              <p className="text-start">{blog.details} <br /><Link to=''>read more..</Link> </p>
             </div>
           </SwiperSlide>
         ))}

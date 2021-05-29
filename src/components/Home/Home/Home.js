@@ -10,6 +10,7 @@ import OfferSlider from "../OfferSlider/OfferSlider";
 import SubscribeNews from "../SubscribeNews/SubscribeNews";
 import Review from "../Review/Review";
 import Blog from "../Blog/Blog";
+import Sponser from "../Sponser/Sponser";
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
             <HomeBannerSlider></HomeBannerSlider>
             <OfferDetails></OfferDetails>
             <Shop />
+            <Sponser></Sponser>
           </div>
         </div>
       </div>
