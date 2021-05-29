@@ -30,6 +30,7 @@ const Shop = () => {
                             <h3><b>Price: ${product.price}</b></h3>
                             <p>{product.star}<FontAwesomeIcon icon={faStar} /></p>
                           
+                            <button className="btn btn-primary">Add to cart</button>
                         </Card.Body>
                     </Card>
                 </div>
