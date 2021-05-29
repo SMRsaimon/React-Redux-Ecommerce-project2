@@ -1,16 +1,9 @@
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-<<<<<<< HEAD
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeFromCart } from "../../redux/actions/CartAction";
-=======
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { getDataFromLocalStorage } from "../../redux/actions/CartAction";
->>>>>>> b0aae20290ef99108c223e9755bc37be9dae6c85
 import MainHeader from "../Shared/MainHeader/MainHeader";
 import TopMenu from "../Shared/TopMenu/TopMenu";
 import "./OrderCheckout.scss";
@@ -20,13 +13,6 @@ const OrderCheckout = () => {
     return state.cart.cart;
   });
   const Dispatch = useDispatch();
-<<<<<<< HEAD
-=======
-  useEffect(() => {
-    Dispatch(getDataFromLocalStorage());
-  }, []);
-  console.log(products);
->>>>>>> b0aae20290ef99108c223e9755bc37be9dae6c85
   return (
     <div>
       <TopMenu></TopMenu>
@@ -52,13 +38,8 @@ const OrderCheckout = () => {
                     <h6>{product.name}</h6>
                     <p>Quantity: {product.quentity}</p>
                     <p>Seller: {product.seller}</p>
-<<<<<<< HEAD
                     <Link onClick={()=>Dispatch(removeFromCart(product.key))}>
                       <FontAwesomeIcon icon={faTrashAlt} size="2x" />
-=======
-                    <Link className="text-danger">
-                      <FontAwesomeIcon icon={faTrashAlt} />
->>>>>>> b0aae20290ef99108c223e9755bc37be9dae6c85
                     </Link>
                   </div>
                   <div className="col-md-3 d-flex justify-content-center align-items-center">

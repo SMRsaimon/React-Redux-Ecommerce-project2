@@ -13,6 +13,7 @@ import Blog from "../Blog/Blog";
 import Sponser from "../Sponser/Sponser";
 import AllProduct from "../AllProduct/AllProduct";
 import Service from "../Service/Service";
+import Footer from "../../Footer/Footer";
 
 const Home = () => {
   return (
@@ -39,6 +40,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
