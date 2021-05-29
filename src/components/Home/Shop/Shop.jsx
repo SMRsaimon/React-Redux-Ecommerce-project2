@@ -1,26 +1,18 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-// import './Shop.css';
-import { Card } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus, faStar } from "@fortawesome/free-solid-svg-icons";
-import { addToCart } from "../../../redux/actions/CartAction";
-=======
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Shop.scss";
 import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus, faStar } from "@fortawesome/free-solid-svg-icons";
 import { addToCart, getDataFromLocalStorage } from "../../../redux/actions/CartAction";
->>>>>>> localStorage
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Pagination, Navigation } from "swiper/core";
 import ProductModal from "../Home/ProductModal/ProductModal";
+
+
 SwiperCore.use([Pagination, Navigation]);
 
 const Shop = () => {
@@ -29,22 +21,19 @@ const Shop = () => {
   });
   const Dispatch = useDispatch();
 
-<<<<<<< HEAD
   const [productss, setProductss] = useState({});
   const handleDetails = (id) => {
     const productsDetails = products.find((x) => x.key === id);
     console.log(productsDetails);
     setProductss(productsDetails);
   };
-  console.log(productss);
-=======
+
   useEffect(() => {
 
     Dispatch(getDataFromLocalStorage())
    
   }, []);
 
->>>>>>> localStorage
   return (
     <div style={{}} className="">
       <h2>FEATURED PRODUCTS</h2>
