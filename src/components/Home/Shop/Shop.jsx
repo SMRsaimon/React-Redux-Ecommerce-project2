@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Shop.scss";
 import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { addToCart } from "../../../redux/actions/CartAction";
+import { addToCart, getDataFromLocalStorage } from "../../../redux/actions/CartAction";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
@@ -17,6 +17,12 @@ const Shop = () => {
     return state.cart.fakeData;
   });
   const Dispatch = useDispatch();
+
+  useEffect(() => {
+
+    Dispatch(getDataFromLocalStorage())
+   
+  }, []);
 
   return (
     <div style={{}} className="">
