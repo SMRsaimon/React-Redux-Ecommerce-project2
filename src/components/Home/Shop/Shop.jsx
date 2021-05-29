@@ -41,7 +41,7 @@ const Shop = () => {
       >
         {products.slice(1, 16).map((product) => (
           <SwiperSlide className=" col-md-4 ">
-            <div class="card">
+            <div class="">
               <Card style={{ width: "100%" }}>
                 <Card.Img variant="top" src={product.img} />
 
