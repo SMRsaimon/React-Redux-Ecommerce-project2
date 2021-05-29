@@ -12,7 +12,6 @@ const AllProduct = () => {
   const topRatedProduct = products.slice(1, 4);
   const bestSellingProduct = products.slice(5, 8);
   const latestProduct = products.slice(9, 12);
-  console.log(topRatedProduct);
   return (
     <div className="mt-4">
       <div className="row">

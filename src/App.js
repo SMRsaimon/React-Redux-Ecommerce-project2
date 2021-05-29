@@ -5,6 +5,7 @@ import NotFound from "./components/NotFound/NotFound";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
+import OrderCheckout from "./components/OrderCheckout/OrderCheckout";
 
 function App() {
   const products = useSelector((state) => {
@@ -14,7 +15,7 @@ function App() {
     <Router>
       <div>
         <div className="full-cart position-fixed end-0 d-flex justify-content-center align-items-center">
-          <Link to="">
+          <Link to="/checkout">
             <FontAwesomeIcon
               className="position-relative"
               icon={faCartArrowDown}
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/checkout">
+            <OrderCheckout></OrderCheckout>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

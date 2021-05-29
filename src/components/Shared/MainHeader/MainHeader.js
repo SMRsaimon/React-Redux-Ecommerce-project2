@@ -89,7 +89,7 @@ const MainHeader = () => {
               </h4>
             </div>
             <div className="my-account ps-4">
-              <Link to="">
+              <Link to="/">
                 <FontAwesomeIcon icon={faUser} size="2x" />
               </Link>
             </div>
@@ -99,7 +99,7 @@ const MainHeader = () => {
               </Link>
             </div>
             <div className="my-cart ps-4">
-              <Link to="">
+              <Link to="/checkout">
                 <FontAwesomeIcon
                   className="position-relative"
                   icon={faCartArrowDown}
