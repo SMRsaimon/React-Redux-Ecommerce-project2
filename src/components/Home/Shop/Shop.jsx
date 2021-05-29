@@ -1,4 +1,5 @@
 import React from "react";
+import "./Shop.scss";
 import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +20,7 @@ const Shop = () => {
 
   return (
     <div style={{}} className="">
-        <h2>FEATURED PRODUCTS</h2>
+      <h2>FEATURED PRODUCTS</h2>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -33,13 +34,17 @@ const Shop = () => {
         {products.slice(1, 16).map((product) => (
           <SwiperSlide className=" col-md-4">
             <div>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={product.img} />
+              <Card className="container" style={{ width: "18rem" }}>
+                <Card.Img
+                  className="shop-image-style"
+                  variant="top"
+                  src={product.img}
+                />
                 <Card.Body>
                   <p>
                     <small>{product.category}</small>
                   </p>
-                  <Card.Title>{product.name.slice(1, 40)}...</Card.Title>
+                  <Card.Title>{product.name.slice(0, 25)}...</Card.Title>
                   <h3>
                     <b>Price: ${product.price}</b>
                   </h3>

@@ -31,7 +31,7 @@ const AllProduct = () => {
                   </div>
                   <div className="col-8">
                     <h6>
-                      <Link>{top.name.slice(1, 20)}...</Link>
+                      <Link>{top.name.slice(0, 20)}...</Link>
                     </h6>
                     <p>
                       {top.star}
