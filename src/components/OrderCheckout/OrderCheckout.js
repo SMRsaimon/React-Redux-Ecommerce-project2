@@ -1,9 +1,9 @@
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeFromCart } from "../../redux/actions/CartAction";
+import { getDataFromLocalStorage, removeFromCart } from "../../redux/actions/CartAction";
 import MainHeader from "../Shared/MainHeader/MainHeader";
 import TopMenu from "../Shared/TopMenu/TopMenu";
 import "./OrderCheckout.scss";
@@ -13,7 +13,11 @@ const OrderCheckout = () => {
     return state.cart.cart;
   });
   const Dispatch = useDispatch();
+  useEffect(() => {
 
+    Dispatch(getDataFromLocalStorage())
+   
+  }, []);
 
   let productPrice = products.reduce((total, currentValue) => {
     return total + currentValue.price * currentValue.quentity;
