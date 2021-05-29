@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { addToCart } from '../../../redux/actions/CartAction';
 
 const Shop = () => {
 
@@ -12,9 +13,7 @@ const Shop = () => {
 
         return state.cart.fakeData
     })
-
-
-
+const Dispatch=useDispatch()
 
 
     return (
@@ -30,7 +29,7 @@ const Shop = () => {
                             <h3><b>Price: ${product.price}</b></h3>
                             <p>{product.star}<FontAwesomeIcon icon={faStar} /></p>
                           
-                            <button className="btn btn-primary">Add to cart</button>
+                            <button  onClick={()=>Dispatch(addToCart(product))} className="btn btn-primary">Add to cart</button>
                         </Card.Body>
                     </Card>
                 </div>
