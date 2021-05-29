@@ -11,6 +11,7 @@ import SubscribeNews from "../SubscribeNews/SubscribeNews";
 import Review from "../Review/Review";
 import Blog from "../Blog/Blog";
 import Sponser from "../Sponser/Sponser";
+import AllProduct from "../AllProduct/AllProduct";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
             <OfferDetails></OfferDetails>
             <Shop />
             <Sponser></Sponser>
+            <AllProduct></AllProduct>
           </div>
         </div>
       </div>
