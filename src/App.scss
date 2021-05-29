@@ -17,3 +17,11 @@ $textBlack: #0000;
 .text-black{
     color: $textBlack;
 }
+.full-cart{
+    width: 80px;
+    height: 100px;
+    background-color: #ddd;
+    margin-top: 25%;
+    z-index: 1000;
+    border-radius: 10px;
+}
