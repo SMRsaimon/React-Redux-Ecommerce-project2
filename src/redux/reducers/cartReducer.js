@@ -1,7 +1,7 @@
 import fakeData from "../../eCommerceFakeData/fakeData"
-import { REMOVE_FROM_CART } from "../actions/type.js";
+import { GET_CART_FROM_LOCALSTORAGE, REMOVE_FROM_CART } from "../actions/type.js";
 import { ADD_TO_CART } from "../actions/type.js";
-import {addToDatabaseCart} from "../../eCommerceFakeData/utilities/databaseManager"
+import {addToDatabaseCart,getDatabaseCart} from "../../eCommerceFakeData/utilities/databaseManager"
 const initialState = {
   cart: [],
   fakeData: fakeData,
@@ -28,10 +28,29 @@ const cartReducer = (state = initialState, action) => {
      
       return {...state,cart:newCart};
     }
+
+    case GET_CART_FROM_LOCALSTORAGE:{
+      const saveCart = getDatabaseCart()
+      const productKeys = Object.keys(saveCart)
+      const previousCut = productKeys.map(pdkey => {
+        const product = state.fakeData.find(x => x.key === pdkey)
+        product.quentity = saveCart[pdkey]
+  
+        return product
+      })
+
+
+      return {...state,cart:previousCut};
+    }
+
+
+    
+    
     case REMOVE_FROM_CART: {
     
       return state;
     }
+ 
     default: {
       return state;
     }
@@ -39,3 +58,5 @@ const cartReducer = (state = initialState, action) => {
 };
 
 export default cartReducer;
+
+
