@@ -31,11 +31,10 @@ const categories = [
 ];
 
 const MainHeader = () => {
-  const products = useSelector(state => {
-
-    return state.cart.cart
-})
-console.log(products);
+  const products = useSelector((state) => {
+    return state.cart.cart;
+  });
+  console.log(products);
   return (
     <section className="main-header mt-3 d-flex align-items-center justify-content-center">
       <div className="container">
@@ -101,8 +100,14 @@ console.log(products);
             </div>
             <div className="my-cart ps-4">
               <Link to="">
-                <FontAwesomeIcon icon={faCartArrowDown} size="2x" />
-                <span>{products.length}</span>
+                <FontAwesomeIcon
+                  className="position-relative"
+                  icon={faCartArrowDown}
+                  size="2x"
+                />
+                <span className="position-absolute translate-middle badge border border-light rounded-circle bg-danger p-2">
+                  {products.length}
+                </span>
               </Link>
             </div>
           </div>
