@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Shop.css';
+// import './Shop.css';
 import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
