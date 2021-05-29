@@ -13,6 +13,32 @@ const OrderCheckout = () => {
     return state.cart.cart;
   });
   const Dispatch = useDispatch();
+
+
+  let productPrice = products.reduce((total, currentValue) => {
+    return total + currentValue.price * currentValue.quentity;
+  }, 0);
+
+  const totalQuentity = products.reduce((total, current) => {
+    return total + current.quentity;
+  }, 0);
+
+  const vat = productPrice / 10;
+
+// delivary charge
+let shipping = 0;
+if (productPrice > 35) {
+  shipping = 3.5;
+} else if (productPrice > 15) {
+  shipping = 4.45;
+} else if (productPrice > 0) {
+  shipping = 15.6;
+}
+  // convert Number
+  const numberConverter = (num) => {
+    const convertNumber = num.toFixed(2);
+    return Number(convertNumber);
+  };
   return (
     <div>
       <TopMenu></TopMenu>
@@ -22,7 +48,7 @@ const OrderCheckout = () => {
           <div className="col-md-7">
             <div className="my-cart-style p-4 shadow d-flex justify-content-between">
               <h4>My Cart ({products.length})</h4>
-              <h4>Total: $1200</h4>
+              <h4>Product Price:  ${numberConverter(productPrice)}</h4>
             </div>
             <div className="p-4 shadow mt-4">
               {products.map((product) => (
@@ -52,7 +78,7 @@ const OrderCheckout = () => {
                     </div>
                   </div>
                   <div className="col-md-3 d-flex justify-content-center align-items-center">
-                    <h6>USD 1200</h6>
+                    <h6>{product.price} x {product.quentity}  = ${product.price*product.quentity}</h6>
                   </div>
                 </div>
               ))}
@@ -65,15 +91,19 @@ const OrderCheckout = () => {
                 <tbody>
                   <tr className="p-3">
                     <td colspan="2">Sub Total</td>
-                    <td>$1200</td>
+                    <td>${productPrice}</td>
                   </tr>
                   <tr className="p-3">
                     <td colspan="2">Shipping</td>
-                    <td>$1200</td>
+                    <td>${shipping}</td>
+                  </tr>
+                  <tr className="p-3">
+                    <td colspan="2">Vat</td>
+                    <td>${vat}</td>
                   </tr>
                   <tr className="p-3">
                     <td colspan="2">Total</td>
-                    <td>$1200</td>
+                    <td>${numberConverter(productPrice+vat+shipping)}</td>
                   </tr>
                 </tbody>
               </table>
