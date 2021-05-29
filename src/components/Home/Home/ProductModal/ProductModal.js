@@ -2,9 +2,12 @@ import React from 'react';
 import { Col, Container, Modal, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faStar } from "@fortawesome/free-solid-svg-icons";
+import { addToCart } from '../../../../redux/actions/CartAction';
+import { useDispatch } from 'react-redux';
 
 
 const ProductModal = (props) => {
+    const Dispatch = useDispatch();
     console.log(props);
     const { img, name, star, price, stock } = props.productinfo;
     return (
@@ -47,7 +50,7 @@ const ProductModal = (props) => {
                             </Modal.Body>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-outline-dark" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal"><FontAwesomeIcon icon={faCartPlus} /> Add To Cart</button>
+                            <button  onClick={() => Dispatch(addToCart(props.productinfo))} class="btn btn-outline-dark" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal"><FontAwesomeIcon icon={faCartPlus} /> Add To Cart</button>
                         </div>
                     </div>
                 </div>
