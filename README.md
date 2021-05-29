@@ -1,3 +1,3 @@
 # Add Sponser component...
 # Add AllProduct component
-# Add Service component
+# Add Services component
