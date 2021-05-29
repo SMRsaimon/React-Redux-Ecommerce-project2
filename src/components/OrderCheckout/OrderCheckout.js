@@ -95,15 +95,15 @@ if (productPrice > 35) {
                 <tbody>
                   <tr className="p-3">
                     <td colspan="2">Sub Total</td>
-                    <td>${productPrice}</td>
+                    <td>${numberConverter(productPrice)}</td>
                   </tr>
                   <tr className="p-3">
                     <td colspan="2">Shipping</td>
-                    <td>${shipping}</td>
+                    <td>${numberConverter(shipping)}</td>
                   </tr>
                   <tr className="p-3">
                     <td colspan="2">Vat</td>
-                    <td>${vat}</td>
+                    <td>${numberConverter(vat)}</td>
                   </tr>
                   <tr className="p-3">
                     <td colspan="2">Total</td>
