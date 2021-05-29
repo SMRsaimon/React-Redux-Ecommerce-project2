@@ -29,7 +29,7 @@ const Shop = () => {
                             <Card.Title>{product.name.slice(1, 40)}...</Card.Title>
                             <h3><b>Price: ${product.price}</b></h3>
                             <p>{product.star}<FontAwesomeIcon icon={faStar} /></p>
-                            <button className="btn btn-primary">ADD to cart</button>
+                          
                         </Card.Body>
                     </Card>
                 </div>
