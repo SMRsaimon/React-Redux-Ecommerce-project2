@@ -1,8 +1,9 @@
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { removeFromCart } from "../../redux/actions/CartAction";
 import MainHeader from "../Shared/MainHeader/MainHeader";
 import TopMenu from "../Shared/TopMenu/TopMenu";
 import "./OrderCheckout.scss";
@@ -11,7 +12,7 @@ const OrderCheckout = () => {
   const products = useSelector((state) => {
     return state.cart.cart;
   });
-  console.log(products);
+  const Dispatch = useDispatch();
   return (
     <div>
       <TopMenu></TopMenu>
@@ -36,7 +37,7 @@ const OrderCheckout = () => {
                   <div className="col-md-3">
                     <h6>{product.name}</h6>
                     <p>Seller: {product.seller}</p>
-                    <Link>
+                    <Link onClick={()=>Dispatch(removeFromCart(product.key))}>
                       <FontAwesomeIcon icon={faTrashAlt} size="2x" />
                     </Link>
                   </div>

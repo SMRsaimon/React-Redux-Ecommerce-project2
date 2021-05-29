@@ -1,7 +1,7 @@
 import fakeData from "../../eCommerceFakeData/fakeData"
 import { GET_CART_FROM_LOCALSTORAGE, REMOVE_FROM_CART } from "../actions/type.js";
 import { ADD_TO_CART } from "../actions/type.js";
-import {addToDatabaseCart,getDatabaseCart} from "../../eCommerceFakeData/utilities/databaseManager"
+import {addToDatabaseCart,getDatabaseCart, removeFromDatabaseCart} from "../../eCommerceFakeData/utilities/databaseManager"
 const initialState = {
   cart: [],
   fakeData: fakeData,
@@ -39,16 +39,14 @@ const cartReducer = (state = initialState, action) => {
         return product
       })
 
-
       return {...state,cart:previousCut};
     }
-
-
-    
-    
     case REMOVE_FROM_CART: {
+
+      const newCart=state.cart.filter(pd=>pd.key !== action.payload)
+      removeFromDatabaseCart( action.payload)
     
-      return state;
+      return {...state,cart:newCart};
     }
  
     default: {
