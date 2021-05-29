@@ -53,7 +53,7 @@ const Review = () => {
       >
         {reviews.map((review) => (
           <SwiperSlide>
-            <div className="border p-4">
+            <div className="border border-info p-4">
               <div className="row">
                 <div className="col-5">
                   <img

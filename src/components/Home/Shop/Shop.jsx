@@ -19,6 +19,7 @@ const Shop = () => {
 
   return (
     <div style={{}} className="">
+        <h2>FEATURED PRODUCTS</h2>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}

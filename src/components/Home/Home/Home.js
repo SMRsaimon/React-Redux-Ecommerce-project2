@@ -9,6 +9,7 @@ import OfferDetails from "../OfferDetails/OfferDetails";
 import OfferSlider from "../OfferSlider/OfferSlider";
 import SubscribeNews from "../SubscribeNews/SubscribeNews";
 import Review from "../Review/Review";
+import Blog from "../Blog/Blog";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
             <OfferSlider></OfferSlider>
             <SubscribeNews></SubscribeNews>
             <Review></Review>
+            <Blog></Blog>
           </div>
           <div className="col-md-9 right-part">
             <HomeBannerSlider></HomeBannerSlider>
