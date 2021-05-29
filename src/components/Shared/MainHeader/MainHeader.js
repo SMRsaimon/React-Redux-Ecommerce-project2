@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
+import { useSelector } from "react-redux";
 
 const categories = [
   {
@@ -30,6 +31,11 @@ const categories = [
 ];
 
 const MainHeader = () => {
+  const products = useSelector(state => {
+
+    return state.cart.cart
+})
+console.log(products);
   return (
     <section className="main-header mt-3 d-flex align-items-center justify-content-center">
       <div className="container">
@@ -96,6 +102,7 @@ const MainHeader = () => {
             <div className="my-cart ps-4">
               <Link to="">
                 <FontAwesomeIcon icon={faCartArrowDown} size="2x" />
+                <span>{products.length}</span>
               </Link>
             </div>
           </div>

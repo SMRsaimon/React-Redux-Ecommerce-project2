@@ -8,6 +8,7 @@ import Shop from "../Shop/Shop";
 import OfferDetails from "../OfferDetails/OfferDetails";
 import OfferSlider from "../OfferSlider/OfferSlider";
 import SubscribeNews from "../SubscribeNews/SubscribeNews";
+import Review from "../Review/Review";
 
 const Home = () => {
   return (
@@ -21,14 +22,15 @@ const Home = () => {
             <HomeMenu></HomeMenu>
             <OfferSlider></OfferSlider>
             <SubscribeNews></SubscribeNews>
+            <Review></Review>
           </div>
           <div className="col-md-9 right-part">
             <HomeBannerSlider></HomeBannerSlider>
             <OfferDetails></OfferDetails>
+            <Shop />
           </div>
         </div>
       </div>
-    <Shop/>
     </div>
   );
 };
