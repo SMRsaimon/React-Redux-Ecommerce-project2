@@ -6,6 +6,7 @@ import HomeFeature from "../HomeFeature/HomeFeature";
 import HomeMenu from "../HomeMenu/HomeMenu";
 import Shop from "../Shop/Shop";
 import OfferDetails from "../OfferDetails/OfferDetails";
+import OfferSlider from "../OfferSlider/OfferSlider";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <div className="row">
           <div className="col-md-3 ps-0 left-part">
             <HomeMenu></HomeMenu>
+            <OfferSlider></OfferSlider>
           </div>
           <div className="col-md-9 right-part">
             <HomeBannerSlider></HomeBannerSlider>
