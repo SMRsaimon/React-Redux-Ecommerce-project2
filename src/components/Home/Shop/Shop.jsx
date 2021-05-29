@@ -30,7 +30,7 @@ const Shop = () => {
         navigation={true}
         className="mySwiper row"
       >
-        {products.slice(1, 15).map((product) => (
+        {products.slice(1, 16).map((product) => (
           <SwiperSlide className=" col-md-4">
             <div>
               <Card style={{ width: "18rem" }}>
