@@ -42,7 +42,7 @@ const OrderCheckout = () => {
                     <h6>{product.name}</h6>
                     <p>Quantity: {product.quentity}</p>
                     <p>Seller: {product.seller}</p>
-                    <Link>
+                    <Link className="text-danger">
                       <FontAwesomeIcon icon={faTrashAlt} />
                     </Link>
                   </div>
