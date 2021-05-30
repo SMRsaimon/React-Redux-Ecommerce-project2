@@ -19,9 +19,9 @@ const Review = () => {
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, reprehenderit.",
     },
     {
-      img: proffesionalPic,
+      img:"https://i.ibb.co/cDG1QC1/1.png",
       name: "Sultan Mahmud",
-      tittle: "Developer",
+      tittle: "Software engineer",
       details:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, reprehenderit.",
     },

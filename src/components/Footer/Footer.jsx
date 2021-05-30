@@ -74,7 +74,7 @@ const Footer = () => {
         <div className="copyRight text-center">
           <p className="text-gray">
             Copyright {new Date().getFullYear()} All Rights Reserved || Design
-            && Build by Team 128
+            && Build by Team 81
           </p>
         </div>
       </div>
