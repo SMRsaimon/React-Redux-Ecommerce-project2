@@ -50,33 +50,30 @@ const cartReducer = (state = initialState, action) => {
     }
     case INCREMENT: {
           
-
-      const product = state.cart.find((x) => x.key === action.payload);
-    product.quentity ++;
-   
-     const allProduct = state.cart.filter((x) => x.key !== action.payload);
- const newProduct=[product,...allProduct]
- 
-
-  
+      const allProduct = [...state.cart]
+      const productIndex = allProduct.findIndex((x) => x.key === action.payload)
+      const product=allProduct[productIndex]
+          
+      product.quentity ++;
+        
+     allProduct.splice(productIndex, 1, product)
       
-    
-      return {...state,cart:newProduct};
+      return {...state,cart:allProduct};
     }
     case DECREMENT: {
 
       //again update
-      const product = state.cart.find((x) => x.key === action.payload);
+      const allProduct = [...state.cart]
+      const productIndex = allProduct.findIndex((x) => x.key === action.payload)
+      const product=allProduct[productIndex]
+
       if(product.quentity>1){
         product.quentity --;
       }
-   
-     const allProduct = state.cart.filter((x) => x.key !== action.payload);
- const newProduct=[product,...allProduct]
- 
-
-    
-      return {...state,cart:newProduct};
+          
+     allProduct.splice(productIndex, 1, product)
+      
+      return {...state,cart:allProduct};
     }
  
     default: {
