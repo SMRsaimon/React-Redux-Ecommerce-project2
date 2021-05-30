@@ -65,7 +65,7 @@ const cartReducer = (state = initialState, action) => {
     }
     case DECREMENT: {
 
-      
+      //again update
       const product = state.cart.find((x) => x.key === action.payload);
       if(product.quentity>1){
         product.quentity --;
