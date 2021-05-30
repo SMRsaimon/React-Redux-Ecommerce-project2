@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getDataFromLocalStorage, removeFromCart } from "../../redux/actions/CartAction";
+import { getDataFromLocalStorage, Increment, removeFromCart } from "../../redux/actions/CartAction";
 import MainHeader from "../Shared/MainHeader/MainHeader";
 import TopMenu from "../Shared/TopMenu/TopMenu";
 import "./OrderCheckout.scss";
@@ -78,7 +78,7 @@ if (productPrice > 35) {
                       <button className="btn btn-style border" disabled>
                         {product.quentity}
                       </button>
-                      <button className="btn btn-style border">+</button>
+                      <button onClick={()=>Dispatch(Increment(product.key))} className="btn btn-style border">+</button>
                     </div>
                   </div>
                   <div className="col-md-3 d-flex justify-content-center align-items-center">
