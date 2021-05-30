@@ -60,7 +60,6 @@ const cartReducer = (state = initialState, action) => {
     }
     case INCREMENT: {
       const product = state.cart.find((x) => x.key === action.payload);
-<<<<<<< HEAD
       const count = product.quentity + 1;
       product.quentity = count;
       const allProduct = state.cart.filter((x) => x.key !== action.payload);
@@ -70,33 +69,6 @@ const cartReducer = (state = initialState, action) => {
     }
     case DECREMENT: {
       return { ...state };
-=======
-    product.quentity ++;
-   
-     const allProduct = state.cart.filter((x) => x.key !== action.payload);
- const newProduct=[product,...allProduct]
- 
-
-  
-      
-    
-      return {...state,cart:newProduct};
-    }
-    case DECREMENT: {
-
-      
-      const product = state.cart.find((x) => x.key === action.payload);
-      if(product.quentity>1){
-        product.quentity --;
-      }
-   
-     const allProduct = state.cart.filter((x) => x.key !== action.payload);
- const newProduct=[product,...allProduct]
- 
-
-    
-      return {...state,cart:newProduct};
->>>>>>> fbca69eb4e56358ee046391a756c5e081c3c3a76
     }
 
     default: {
