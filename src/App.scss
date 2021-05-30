@@ -25,3 +25,14 @@ $textBlack: #0000;
     z-index: 1000;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 1000px) and (min-width: 750px) {
+    .full-cart{
+        margin-top: 35%;
+    }
+}
+@media screen and (max-width: 749px) and (min-width: 300px) {
+    .full-cart{
+        margin-top: 50%;
+    }
+}

@@ -68,7 +68,19 @@ const cartReducer = (state = initialState, action) => {
       return { ...state, cart: newProduct };
     }
     case DECREMENT: {
-      return { ...state };
+
+      //again update
+      const product = state.cart.find((x) => x.key === action.payload);
+      if(product.quentity>1){
+        product.quentity --;
+      }
+   
+     const allProduct = state.cart.filter((x) => x.key !== action.payload);
+ const newProduct=[product,...allProduct]
+ 
+
+    
+      return {...state,cart:newProduct};
     }
 
     default: {

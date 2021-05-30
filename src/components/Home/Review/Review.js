@@ -14,21 +14,21 @@ const Review = () => {
     {
       img: proffesionalPic,
       name: "Md Nayem Hossain",
-      tittle: "CEO & Founder",
+      tittle: "Developer",
       details:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, reprehenderit.",
     },
     {
       img: proffesionalPic,
-      name: "Md Nayem Hossain",
-      tittle: "CEO & Founder",
+      name: "Sultan Mahmud",
+      tittle: "Developer",
       details:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, reprehenderit.",
     },
     {
       img: proffesionalPic,
-      name: "Md Nayem Hossain",
-      tittle: "CEO & Founder",
+      name: "Tanvir Hossain",
+      tittle: "Developer",
       details:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, reprehenderit.",
     },
