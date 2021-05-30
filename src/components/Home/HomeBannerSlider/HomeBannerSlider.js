@@ -14,7 +14,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const HomeBannerSlider = () => {
   return (
-    <div>
+    <div className='sm-mt-3'>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
