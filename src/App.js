@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div>
-        {products.length && (
+        {products.length ? (
           <div className="full-cart position-fixed end-0 d-flex justify-content-center align-items-center">
             <Link to="/checkout">
               <FontAwesomeIcon
@@ -26,8 +26,8 @@ function App() {
                 {products.length}
               </span>
             </Link>
-          </div>
-        )}
+          </div> 
+        ): null}
 
         <Switch>
           <Route exact path="/">
