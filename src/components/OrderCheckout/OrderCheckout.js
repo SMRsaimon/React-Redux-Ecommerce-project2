@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getDataFromLocalStorage, Increment, removeFromCart } from "../../redux/actions/CartAction";
+import { Decrement, getDataFromLocalStorage, Increment, removeFromCart } from "../../redux/actions/CartAction";
 import MainHeader from "../Shared/MainHeader/MainHeader";
 import TopMenu from "../Shared/TopMenu/TopMenu";
 import "./OrderCheckout.scss";
@@ -74,7 +74,7 @@ if (productPrice > 35) {
                   </div>
                   <div className="col-md-3 d-flex justify-content-center align-items-center">
                     <div className="">
-                      <button className="btn btn-style border">-</button>
+                      <button onClick={()=>Dispatch(Decrement(product.key))} className="btn btn-style border">-</button>
                       <button className="btn btn-style border" disabled>
                         {product.quentity}
                       </button>
@@ -82,7 +82,7 @@ if (productPrice > 35) {
                     </div>
                   </div>
                   <div className="col-md-3 d-flex justify-content-center align-items-center">
-                    <h6>{product.price} x {product.quentity}  = ${product.price*product.quentity}</h6>
+                    <h6>{product.price} x {product.quentity}  = ${numberConverter(product.price*product.quentity)}</h6>
                   </div>
                 </div>
               ))}

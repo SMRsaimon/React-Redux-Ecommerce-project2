@@ -52,11 +52,12 @@ const cartReducer = (state = initialState, action) => {
           
 
       const product = state.cart.find((x) => x.key === action.payload);
-    const count = product.quentity + 1;
-    product.quentity = count;
+    product.quentity ++;
+   
      const allProduct = state.cart.filter((x) => x.key !== action.payload);
  const newProduct=[product,...allProduct]
  
+
   
       
     
@@ -65,8 +66,17 @@ const cartReducer = (state = initialState, action) => {
     case DECREMENT: {
 
       
+      const product = state.cart.find((x) => x.key === action.payload);
+      if(product.quentity>1){
+        product.quentity --;
+      }
+   
+     const allProduct = state.cart.filter((x) => x.key !== action.payload);
+ const newProduct=[product,...allProduct]
+ 
+
     
-      return {...state};
+      return {...state,cart:newProduct};
     }
  
     default: {
