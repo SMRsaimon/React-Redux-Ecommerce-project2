@@ -1,5 +1,5 @@
 import fakeData from "../../eCommerceFakeData/fakeData"
-import { GET_CART_FROM_LOCALSTORAGE, REMOVE_FROM_CART } from "../actions/type.js";
+import { DECREMENT, GET_CART_FROM_LOCALSTORAGE, INCREMENT, REMOVE_FROM_CART } from "../actions/type.js";
 import { ADD_TO_CART } from "../actions/type.js";
 import {addToDatabaseCart,getDatabaseCart, removeFromDatabaseCart} from "../../eCommerceFakeData/utilities/databaseManager"
 const initialState = {
@@ -47,6 +47,26 @@ const cartReducer = (state = initialState, action) => {
       removeFromDatabaseCart( action.payload)
     
       return {...state,cart:newCart};
+    }
+    case INCREMENT: {
+          
+
+      const product = state.cart.find((x) => x.key === action.payload);
+    const count = product.quentity + 1;
+    product.quentity = count;
+     const allProduct = state.cart.filter((x) => x.key !== action.payload);
+ const newProduct=[product,...allProduct]
+ 
+  
+      
+    
+      return {...state,cart:newProduct};
+    }
+    case DECREMENT: {
+
+      
+    
+      return {...state};
     }
  
     default: {
