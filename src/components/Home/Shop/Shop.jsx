@@ -4,14 +4,16 @@ import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faStar } from "@fortawesome/free-solid-svg-icons";
-import { addToCart, getDataFromLocalStorage } from "../../../redux/actions/CartAction";
+import {
+  addToCart,
+  getDataFromLocalStorage,
+} from "../../../redux/actions/CartAction";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import SwiperCore, { Pagination, Navigation } from "swiper/core";
 import ProductModal from "../Home/ProductModal/ProductModal";
-
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -29,29 +31,38 @@ const Shop = () => {
   };
 
   useEffect(() => {
-
-    Dispatch(getDataFromLocalStorage())
-   
+    Dispatch(getDataFromLocalStorage());
   }, []);
 
   return (
-    <div style={{}} className="">
+    <div style={{}} className="p-sm-2">
       <h2>FEATURED PRODUCTS</h2>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        slidesPerGroup={3}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        pagination={false}
+        slidesPerView={1}
+        spaceBetween={10}
         navigation={true}
+        pagination={false}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
         className="mySwiper row"
       >
         {products.slice(1, 16).map((product) => (
           <SwiperSlide className=" col-md-4 ">
             <div class="">
               <Card style={{ width: "100%" }}>
-                <Card.Img variant="top" src={product.img} />
+                <Card.Img className='p-3' variant="top" src={product.img} />
 
                 <Card.Body>
                   <p>

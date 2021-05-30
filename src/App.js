@@ -14,18 +14,21 @@ function App() {
   return (
     <Router>
       <div>
-        <div className="full-cart position-fixed end-0 d-flex justify-content-center align-items-center">
-          <Link to="/checkout">
-            <FontAwesomeIcon
-              className="position-relative"
-              icon={faCartArrowDown}
-              size="2x"
-            />
-            <span className="position-absolute translate-middle badge border border-light rounded-circle bg-danger p-2">
-              {products.length}
-            </span>
-          </Link>
-        </div>
+        {products.length ? (
+          <div className="full-cart position-fixed end-0 d-flex justify-content-center align-items-center">
+            <Link to="/checkout">
+              <FontAwesomeIcon
+                className="position-relative"
+                icon={faCartArrowDown}
+                size="2x"
+              />
+              <span className="position-absolute translate-middle badge border border-light rounded-circle bg-danger p-2">
+                {products.length}
+              </span>
+            </Link>
+          </div> 
+        ): null}
+
         <Switch>
           <Route exact path="/">
             <Home></Home>

@@ -68,8 +68,8 @@ if (productPrice > 35) {
                     <h6>{product.name}</h6>
                     <p>Quantity: {product.quentity}</p>
                     <p>Seller: {product.seller}</p>
-                    <Link onClick={()=>Dispatch(removeFromCart(product.key))}>
-                      <FontAwesomeIcon icon={faTrashAlt} size="2x" />
+                    <Link className='text-danger' onClick={()=>Dispatch(removeFromCart(product.key))}>
+                      <FontAwesomeIcon icon={faTrashAlt} size="1x" />
                     </Link>
                   </div>
                   <div className="col-md-3 d-flex justify-content-center align-items-center">

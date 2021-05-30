@@ -40,7 +40,7 @@ const MainHeader = () => {
       <div className="container">
         <div className="row d-flex align-items-center justify-content-between">
           <div className="logo col-2">
-            <h2>E-commerce</h2>
+            <h2><Link style={{textDecoration:'none'}} className='text-dark' to="/">SUNDARBAN</Link></h2>
           </div>
           <div className="row search-cate-btn-part d-flex align-items-center col-5">
             <div className="col-7">

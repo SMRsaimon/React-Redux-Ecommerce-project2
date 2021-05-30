@@ -24,7 +24,7 @@ const features = [
 
 const HomeFeature = () => {
   return (
-    <div className="home-features d-flex justify-content-center mt-3">
+    <div className="home-features d-flex justify-content-center mt-3 px-3">
       <div className="container row border">
         {features.map((feature) => (
           <div className="col-md-4 d-flex justify-content-center py-3">

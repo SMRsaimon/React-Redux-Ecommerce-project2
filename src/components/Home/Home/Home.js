@@ -23,24 +23,26 @@ const Home = () => {
       <HomeFeature></HomeFeature>
       <div className="container mt-4">
         <div className="row">
-          <div className="col-md-3 ps-0 left-part">
+          <div className="col-md-3 ps-0 left-part mt-2">
             <HomeMenu></HomeMenu>
-            <OfferSlider></OfferSlider>
-            <SubscribeNews></SubscribeNews>
-            <Review></Review>
-            <Blog></Blog>
+            <div className="d-none d-md-block">
+              <OfferSlider></OfferSlider>
+              <SubscribeNews></SubscribeNews>
+              <Review></Review>
+              <Blog></Blog>
+            </div>
           </div>
-          <div className="col-md-9 right-part">
+          <div className="col-md-9 right-part mt-2">
             <HomeBannerSlider></HomeBannerSlider>
             <OfferDetails></OfferDetails>
             <Shop />
             <Sponser></Sponser>
             <AllProduct></AllProduct>
-            <Service></Service>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Service></Service>
+      <Footer />
     </div>
   );
 };

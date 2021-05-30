@@ -20,7 +20,7 @@ const Sponser = () => {
     <div className='mt-4'>
       <div className="row">
         {brandName.map((brand) => (
-          <div className="col-3 border-top border-bottom d-flex justify-content-center">
+          <div className="col-md-3 col-6 border-top border-bottom d-flex justify-content-center">
             <img className='py-5' src={brand.img} alt="" />
           </div>
         ))}

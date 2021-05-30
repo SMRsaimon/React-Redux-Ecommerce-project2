@@ -15,8 +15,8 @@ const AllProduct = () => {
   return (
     <div className="mt-4">
       <div className="row">
-        <div className="col-md-4">
-          <h4>TOP RATED PRODUCTS</h4>
+        <div className="col-md-4 text-center mt-3 mt-md-0">
+          <h4 className='text-start'>TOP RATED PRODUCTS</h4>
           <div className="row">
             {topRatedProduct.map((top) => (
               <div className="col-12">
@@ -43,8 +43,8 @@ const AllProduct = () => {
             ))}
           </div>
         </div>
-        <div className="col-md-4">
-          <h4>BEST SELLING PRODUCTS</h4>
+        <div className="col-md-4 text-center mt-3 mt-md-0">
+          <h4 className='text-start'>BEST SELLING PRODUCTS</h4>
           <div className="row">
             {bestSellingProduct.map((top) => (
               <div className="col-12">
@@ -71,8 +71,8 @@ const AllProduct = () => {
             ))}
           </div>
         </div>
-        <div className="col-md-4">
-          <h4>LATEST PRODUCTS</h4>
+        <div className="col-md-4 text-center mt-3 mt-md-0">
+          <h4 className='text-start'>LATEST PRODUCTS</h4>
           <div className="row">
             {latestProduct.map((top) => (
               <div className="col-12">

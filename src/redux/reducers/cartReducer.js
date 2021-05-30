@@ -62,15 +62,17 @@ const cartReducer = (state = initialState, action) => {
     }
     case DECREMENT: {
 
-      //again update
+     
       const allProduct = [...state.cart]
       const productIndex = allProduct.findIndex((x) => x.key === action.payload)
       const product=allProduct[productIndex]
 
       if(product.quentity>1){
-        product.quentity --;
+         product.quentity --;
       }
           
+     
+        
      allProduct.splice(productIndex, 1, product)
       
       return {...state,cart:allProduct};
